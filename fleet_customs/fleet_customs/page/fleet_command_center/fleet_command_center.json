@@ -1,0 +1,20 @@
+{
+ "content": null,
+ "creation": "2026-11-13 16:38:00.000000",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2026-11-13 16:38:00.000000",
+ "modified_by": "Administrator",
+ "module": "Fleet Customs",
+ "name": "fleet_command_center",
+ "owner": "Administrator",
+ "page_name": "fleet_command_center",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "standard": "Yes",
+ "title": "Customs Fleet Command Center"
+}

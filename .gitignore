@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.DS_Store
+*.egg-info/
+dist/
+build/
+.env
+.env.*
+node_modules/
+
+# Go / Gateway binaries & logs
+gateway/eseal-gateway
+gateway/logs/
+*.log

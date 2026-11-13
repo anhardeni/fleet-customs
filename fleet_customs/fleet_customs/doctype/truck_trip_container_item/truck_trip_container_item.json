@@ -1,0 +1,166 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-11-12 19:48:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "container_no",
+  "container_size",
+  "eseal",
+  "seal_status",
+  "seal_battery",
+  "column_break_dest",
+  "destination_code",
+  "dest_lat",
+  "dest_lng",
+  "dest_radius_meter",
+  "section_break_unseal",
+  "unseal_permission_granted",
+  "unseal_token",
+  "unseal_attempts",
+  "unseal_max_attempts",
+  "unseal_officer_nip",
+  "unseal_permit_number",
+  "item_status",
+  "unlock_timestamp"
+ ],
+ "fields": [
+  {
+   "fieldname": "container_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nomor Kontainer (ISO 6346)",
+   "reqd": 1
+  },
+  {
+   "default": "40",
+   "fieldname": "container_size",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Ukuran Kontainer",
+   "options": "20\n40\n45",
+   "reqd": 1
+  },
+  {
+   "fieldname": "eseal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Electronic Seal (e-Seal)",
+   "options": "Electronic Seal",
+   "reqd": 1
+  },
+  {
+   "default": "Locked",
+   "fieldname": "seal_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status Segel",
+   "options": "Locked\nUnlocked\nTampered"
+  },
+  {
+   "default": "100",
+   "fieldname": "seal_battery",
+   "fieldtype": "Percent",
+   "label": "Baterai Segel (%)"
+  },
+  {
+   "fieldname": "column_break_dest",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "destination_code",
+   "fieldtype": "Link",
+   "label": "Tujuan Pabean",
+   "options": "Customs Destination"
+  },
+  {
+   "fieldname": "dest_lat",
+   "fieldtype": "Float",
+   "label": "Latitude Tujuan",
+   "precision": "7"
+  },
+  {
+   "fieldname": "dest_lng",
+   "fieldtype": "Float",
+   "label": "Longitude Tujuan",
+   "precision": "7"
+  },
+  {
+   "default": "250",
+   "fieldname": "dest_radius_meter",
+   "fieldtype": "Int",
+   "label": "Radius Sah (Meter)"
+  },
+  {
+   "fieldname": "section_break_unseal",
+   "fieldtype": "Section Break",
+   "label": "Proses Pengawasan Unseal Pabean"
+  },
+  {
+   "default": "0",
+   "fieldname": "unseal_permission_granted",
+   "fieldtype": "Check",
+   "label": "Izin Unseal Disetujui (SPPB)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "unseal_token",
+   "fieldtype": "Data",
+   "label": "Cryptographic Token SHA-256 Hash",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "unseal_attempts",
+   "fieldtype": "Int",
+   "label": "Percobaan Input Token",
+   "read_only": 1
+  },
+  {
+   "default": "5",
+   "fieldname": "unseal_max_attempts",
+   "fieldtype": "Int",
+   "label": "Maks Percobaan Token"
+  },
+  {
+   "fieldname": "unseal_officer_nip",
+   "fieldtype": "Data",
+   "label": "NIP Pejabat Bea Cukai",
+   "read_only": 1
+  },
+  {
+   "fieldname": "unseal_permit_number",
+   "fieldtype": "Data",
+   "label": "Nomor Izin / SPPB",
+   "read_only": 1
+  },
+  {
+   "default": "Scheduled",
+   "fieldname": "item_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status Kontainer",
+   "options": "Scheduled\nIn Transit\nArrived\nUnsealed\nTampered"
+  },
+  {
+   "fieldname": "unlock_timestamp",
+   "fieldtype": "Datetime",
+   "label": "Waktu Pembukaan Segel",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-11-12 19:48:00.000000",
+ "modified_by": "Administrator",
+ "module": "Fleet Customs",
+ "name": "Truck Trip Container Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,86 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "field:nomor_aju",
+ "creation": "2026-11-12 19:48:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "nomor_aju",
+  "bc_type",
+  "bc_number",
+  "column_break_office",
+  "customs_office",
+  "importer_exporter",
+  "doc_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "nomor_aju",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nomor Aju (26 Karakter)",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "bc_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Jenis Dokumen BC",
+   "options": "BC 1.1\nBC 1.2\nBC 2.3\nBC 2.7\nPIA",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bc_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nomor Pendaftaran BC"
+  },
+  {
+   "fieldname": "column_break_office",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customs_office",
+   "fieldtype": "Data",
+   "label": "Kode Kantor Pabean (6 Char)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "importer_exporter",
+   "fieldtype": "Data",
+   "label": "Nama Importir / Eksportir"
+  },
+  {
+   "fieldname": "doc_date",
+   "fieldtype": "Date",
+   "label": "Tanggal Dokumen"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-11-12 19:48:00.000000",
+ "modified_by": "Administrator",
+ "module": "Fleet Customs",
+ "name": "Customs Declaration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "hash",
+ "creation": "2026-11-12 19:48:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "trip",
+  "seal_id",
+  "truck",
+  "timestamp",
+  "column_break_telemetry",
+  "latitude",
+  "longitude",
+  "speed",
+  "heading",
+  "battery"
+ ],
+ "fields": [
+  {
+   "fieldname": "trip",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Trip ID",
+   "options": "Truck Trip Delivery",
+   "reqd": 1
+  },
+  {
+   "fieldname": "seal_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Seal ID"
+  },
+  {
+   "fieldname": "truck",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Truk"
+  },
+  {
+   "fieldname": "timestamp",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Timestamp GPS",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_telemetry",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Float",
+   "label": "Latitude",
+   "precision": "7",
+   "reqd": 1
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Float",
+   "label": "Longitude",
+   "precision": "7",
+   "reqd": 1
+  },
+  {
+   "fieldname": "speed",
+   "fieldtype": "Float",
+   "label": "Speed (km/h)"
+  },
+  {
+   "fieldname": "heading",
+   "fieldtype": "Float",
+   "label": "Heading (°)"
+  },
+  {
+   "fieldname": "battery",
+   "fieldtype": "Int",
+   "label": "Battery (%)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-11-12 19:48:00.000000",
+ "modified_by": "Administrator",
+ "module": "Fleet Customs",
+ "name": "Truck GPS Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0
+}

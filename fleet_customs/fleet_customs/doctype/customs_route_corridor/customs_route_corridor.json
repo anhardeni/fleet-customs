@@ -1,0 +1,89 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "field:corridor_name",
+ "creation": "2026-11-12 19:48:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "corridor_name",
+  "origin",
+  "destination",
+  "column_break_tolerance",
+  "tolerance_meters",
+  "section_break_polyline",
+  "route_polyline_json"
+ ],
+ "fields": [
+  {
+   "fieldname": "corridor_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nama Koridor Rute Sah",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "origin",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Titik Asal (Origin)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "destination",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Titik Tujuan (Destination)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_tolerance",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "300",
+   "fieldname": "tolerance_meters",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Toleransi Deviasi Maks (Meter)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_polyline",
+   "fieldtype": "Section Break",
+   "label": "Polyline Koordinat Rute Sah (JSON)"
+  },
+  {
+   "fieldname": "route_polyline_json",
+   "fieldtype": "Long Text",
+   "label": "Koordinat Polyline [[lat,lng], ...]",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-11-12 19:48:00.000000",
+ "modified_by": "Administrator",
+ "module": "Fleet Customs",
+ "name": "Customs Route Corridor",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

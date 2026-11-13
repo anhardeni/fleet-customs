@@ -1,0 +1,161 @@
+.customs-command-center-wrapper {
+    padding: 10px 0;
+}
+
+.hud-metrics-container {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.metric-card {
+    flex: 1;
+    min-width: 140px;
+    padding: 12px;
+    border-radius: 8px;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.metric-total { background: #37474f; }
+.metric-safe { background: #2e7d32; }
+.metric-warning { background: #f57f17; }
+.metric-breach { background: #c62828; }
+.metric-breakdown { background: #e65100; }
+.metric-emergency { background: #6a1b9a; animation: pulse-border 1.5s infinite; }
+
+.metric-val {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.metric-label {
+    font-size: 11px;
+    opacity: 0.9;
+    margin-top: 4px;
+}
+
+.main-split-view {
+    display: flex;
+    gap: 15px;
+}
+
+.map-section {
+    flex: 7;
+    position: relative;
+}
+
+.map-toolbar {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+.sidebar-section {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 4px;
+    background: #eceff1;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+.tab-btn {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 6px;
+    font-size: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.tab-btn.active {
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    color: #1976d2;
+}
+
+.fleet-cards-scroll {
+    max-height: 380px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-right: 4px;
+}
+
+.fleet-card {
+    background: #fff;
+    border: 1px solid #cfd8dc;
+    border-left: 5px solid #2e7d32;
+    border-radius: 6px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.fleet-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+}
+
+.fleet-card.risk-breach { border-left-color: #c62828; }
+.fleet-card.risk-warning { border-left-color: #f57f17; }
+.fleet-card.risk-breakdown { border-left-color: #e65100; }
+.fleet-card.risk-emergency { border-left-color: #6a1b9a; background: #f3e5f5; }
+
+.fleet-card .card-head {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.fleet-card .badge-status {
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: #e0e0e0;
+}
+
+.fleet-card.risk-breach .badge-status { background: #ffebee; color: #c62828; }
+.fleet-card.risk-emergency .badge-status { background: #ede7f6; color: #6a1b9a; }
+
+.fleet-card .card-body-text {
+    font-size: 11px;
+    color: #546e7a;
+    margin-top: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.audit-feed-section {
+    background: #fafafa;
+    border: 1px solid #eceff1;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.customs-popup-card {
+    font-size: 12px;
+    line-height: 1.4;
+    min-width: 220px;
+}
+
+@keyframes pulse-border {
+    0% { box-shadow: 0 0 0 0 rgba(106, 27, 154, 0.7); }
+    70% { box-shadow: 0 0 0 8px rgba(106, 27, 154, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(106, 27, 154, 0); }
+}
+

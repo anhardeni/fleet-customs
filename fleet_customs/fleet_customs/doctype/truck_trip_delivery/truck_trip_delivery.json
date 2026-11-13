@@ -1,0 +1,336 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "format:TRIP-{YYYY}-{#####}",
+ "creation": "2026-11-12 19:48:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "customs_doc",
+  "nomor_aju",
+  "bc_type",
+  "bc_number",
+  "customs_office",
+  "singlecore_ref_id",
+  "column_break_status",
+  "route_status",
+  "workflow_state",
+  "departure_time",
+  "arrival_time",
+  "route_corridor",
+  "section_break_truck",
+  "truck",
+  "truck_gps_id",
+  "driver_name",
+  "driver_phone",
+  "column_break_transporter",
+  "transporter_company",
+  "panic_token",
+  "section_break_telemetry",
+  "current_latitude",
+  "current_longitude",
+  "seal_status",
+  "section_break_sla",
+  "max_allowed_hours",
+  "sla_expiry_datetime",
+  "is_overdue",
+  "overdue_reason",
+  "column_break_eta",
+  "eta_datetime",
+  "eta_status",
+  "section_break_containers",
+  "containers",
+  "section_break_breakdown",
+  "has_breakdown",
+  "breakdown_type",
+  "breakdown_location",
+  "column_break_transshipment",
+  "is_transshipment",
+  "replacement_truck",
+  "bap_number",
+  "bap_attachment"
+ ],
+ "fields": [
+  {
+   "fieldname": "customs_doc",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Dokumen Pabean (Declaration)",
+   "options": "Customs Declaration",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nomor_aju",
+   "fieldtype": "Data",
+   "label": "Nomor Aju",
+   "read_only": 1
+  },
+  {
+   "fieldname": "bc_type",
+   "fieldtype": "Select",
+   "label": "Jenis BC",
+   "options": "BC 1.1\nBC 1.2\nBC 2.3\nBC 2.7\nPIA",
+   "read_only": 1
+  },
+  {
+   "fieldname": "bc_number",
+   "fieldtype": "Data",
+   "label": "Nomor BC",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customs_office",
+   "fieldtype": "Data",
+   "label": "Kantor Pabean",
+   "read_only": 1
+  },
+  {
+   "fieldname": "singlecore_ref_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Singlecore DJBC Ref ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_status",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "route_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status Rute",
+   "options": "Draft\nScheduled\nOn Route\nBreakdown / Stopped\nTransshipment\nArrived\nOff Route / Alert\nEmergency\nClosed"
+  },
+  {
+   "default": "Pending Approval",
+   "fieldname": "workflow_state",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status Pengawasan (Workflow)",
+   "options": "Pending Approval\nIn Transit\nArrival Confirmed\nInspection Required\nUnseal Approved\nCompleted"
+  },
+  {
+   "fieldname": "departure_time",
+   "fieldtype": "Datetime",
+   "label": "Waktu Berangkat (Departure)"
+  },
+  {
+   "fieldname": "arrival_time",
+   "fieldtype": "Datetime",
+   "label": "Waktu Tiba (Arrival)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "route_corridor",
+   "fieldtype": "Link",
+   "label": "Koridor Rute Sah Pabean",
+   "options": "Customs Route Corridor"
+  },
+  {
+   "fieldname": "section_break_truck",
+   "fieldtype": "Section Break",
+   "label": "Armada & Driver"
+  },
+  {
+   "fieldname": "truck",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Truk Kendaraan",
+   "options": "Truck",
+   "reqd": 1
+  },
+  {
+   "fieldname": "truck_gps_id",
+   "fieldtype": "Data",
+   "label": "GPS ID Truk"
+  },
+  {
+   "fieldname": "driver_name",
+   "fieldtype": "Data",
+   "label": "Nama Driver"
+  },
+  {
+   "fieldname": "driver_phone",
+   "fieldtype": "Data",
+   "label": "Telepon Driver"
+  },
+  {
+   "fieldname": "column_break_transporter",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "transporter_company",
+   "fieldtype": "Link",
+   "label": "Perusahaan Transporter",
+   "options": "Company"
+  },
+  {
+   "fieldname": "panic_token",
+   "fieldtype": "Password",
+   "label": "Token Tombol Darurat Driver (Panic URL)"
+  },
+  {
+   "fieldname": "section_break_telemetry",
+   "fieldtype": "Section Break",
+   "label": "Posisi Spasial Realtime"
+  },
+  {
+   "fieldname": "current_latitude",
+   "fieldtype": "Float",
+   "label": "Current Latitude",
+   "precision": "7",
+   "read_only": 1
+  },
+  {
+   "fieldname": "current_longitude",
+   "fieldtype": "Float",
+   "label": "Current Longitude",
+   "precision": "7",
+   "read_only": 1
+  },
+  {
+   "default": "Locked",
+   "fieldname": "seal_status",
+   "fieldtype": "Select",
+   "label": "Agregat Status Segel",
+   "options": "Locked\nUnlocked\nTampered",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_sla",
+   "fieldtype": "Section Break",
+   "label": "SLA & Estimasi Kedatangan (ETA)"
+  },
+  {
+   "default": "6.0",
+   "fieldname": "max_allowed_hours",
+   "fieldtype": "Float",
+   "label": "Batas Waktu Tempuh Maks (Jam)"
+  },
+  {
+   "fieldname": "sla_expiry_datetime",
+   "fieldtype": "Datetime",
+   "label": "Batas Akhir SLA",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_overdue",
+   "fieldtype": "Check",
+   "label": "Overdue SLA Pabean",
+   "read_only": 1
+  },
+  {
+   "fieldname": "overdue_reason",
+   "fieldtype": "Small Text",
+   "label": "Alasan Keterlambatan SLA"
+  },
+  {
+   "fieldname": "column_break_eta",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "eta_datetime",
+   "fieldtype": "Datetime",
+   "label": "Estimasi Kedatangan Dinamis (ETA)",
+   "read_only": 1
+  },
+  {
+   "default": "On Time",
+   "fieldname": "eta_status",
+   "fieldtype": "Select",
+   "label": "Status ETA",
+   "options": "On Time\nTight\nWill Be Late",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_containers",
+   "fieldtype": "Section Break",
+   "label": "Kontainer & e-Seal Terpasang"
+  },
+  {
+   "fieldname": "containers",
+   "fieldtype": "Table",
+   "label": "Daftar Kontainer",
+   "options": "Truck Trip Container Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_breakdown",
+   "fieldtype": "Section Break",
+   "label": "Gangguan Perjalanan & Alih Muat (Force Majeure)"
+  },
+  {
+   "default": "0",
+   "fieldname": "has_breakdown",
+   "fieldtype": "Check",
+   "label": "Terjadi Breakdown / Mogok"
+  },
+  {
+   "fieldname": "breakdown_type",
+   "fieldtype": "Select",
+   "label": "Jenis Gangguan",
+   "options": "Mesin Mogok\nBan Pecah\nKecelakaan\nRute Terputus\nLainnya"
+  },
+  {
+   "fieldname": "breakdown_location",
+   "fieldtype": "Data",
+   "label": "Lokasi Gangguan (Lat/Lng)"
+  },
+  {
+   "fieldname": "column_break_transshipment",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_transshipment",
+   "fieldtype": "Check",
+   "label": "Dilakukan Alih Muat (Transshipment)"
+  },
+  {
+   "fieldname": "replacement_truck",
+   "fieldtype": "Link",
+   "label": "Truk Pengganti",
+   "options": "Truck"
+  },
+  {
+   "fieldname": "bap_number",
+   "fieldtype": "Data",
+   "label": "Nomor BAP Fisik Pabean"
+  },
+  {
+   "fieldname": "bap_attachment",
+   "fieldtype": "Attach",
+   "label": "Lampiran Dokumen BAP"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-11-12 19:48:00.000000",
+ "modified_by": "Administrator",
+ "module": "Fleet Customs",
+ "name": "Truck Trip Delivery",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
